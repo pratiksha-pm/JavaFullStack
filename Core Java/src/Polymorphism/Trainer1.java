@@ -1,38 +1,35 @@
 package Polymorphism;
 
-public class mainTrainer {
+public class Trainer1 {
 
 	public static void main(String[] args) {
-		Trainer T;
-		 T=new JavaTrainer();
-		 T.Teach();
-T=new ApiTrainer();
-T.Teach();
-T=new TestTrainer();
-
-T.Teach();
-
+		duty(new JavaTrainermain());
+		duty(new ApiTrainermain());
+		duty(new TestTrainermain());
+	}
+	static void duty(Trainermain t) {
+		t.Teach();
 	}
 
 }
-class Trainer{
+class Trainermain{
 	void Teach() {
 		System.out.println("Trainer teches");
 	}
 }
-class JavaTrainer{
+class JavaTrainermain extends Trainermain{
 	void Teach() {
 		System.out.println("Trainer teches java");
 		
 	}
 }
-class ApiTrainer{
+class ApiTrainermain extends Trainermain{
 	void Teach() {
 		System.out.println("Trainer teches api");
 		
 	}
 }
-class TestTrainer{
+class TestTrainermain extends Trainermain{
 	void Teach() {
 		System.out.println("Trainer teches tests");
 		

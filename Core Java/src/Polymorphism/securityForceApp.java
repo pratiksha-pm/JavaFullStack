@@ -1,25 +1,20 @@
-package Inheritance;
+package Polymorphism;
 
-public class Main {
+
+
+public class securityForceApp {
 
 	public static void main(String[] args) {
-		
-		Army a=new Army();
-		a.job();
-		a.protect();
-		a.useLand();
-		System.out.println("----------");
-		Navy n=new Navy();
-		n.protect();
-		n.useShip();
-		System.out.println("----------");
-		AirForce f=new AirForce();
-		f.protect();
-		f.useJets();
-
+	
+       duty(new Army());
+		duty(new Navy());
+		duty(new AirForce());
 	}
-
-}
+	static void duty(securityForce s) {
+		s.protect();
+	}
+		
+	}
 class securityForce{
 	void job() {
 		System.out.println("Protect Nation");
@@ -35,12 +30,12 @@ class Army extends securityForce{
 		
 	}
 	void protect() {
-		System.out.println("Protecte land ");
+		System.out.println("Protecte land1 ");
 	}
 }
 class Navy extends securityForce{
 	void protect() {
-		System.out.println("Protecte ship ");
+		System.out.println("Protecte ship1 ");
 	}
 	void useShip() {
 		System.out.println("Army uses Ship ");
@@ -50,7 +45,7 @@ class Navy extends securityForce{
 }
 class AirForce extends securityForce{
 	void protect() {
-		System.out.println("Protecte air ");
+		System.out.println("Protecte air1 ");
 	}
 	void useJets() {
 		System.out.println("Army uses air ");
